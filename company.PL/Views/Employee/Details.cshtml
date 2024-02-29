@@ -1,0 +1,20 @@
+﻿@model EmployeeViewModel
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details employee</h1>
+<br />
+<br />
+<div>
+    <img src="~/Files/Images/@Model.ImageName" width="100" class="img-fluid rounded-circle" />
+</div>
+<div class="form-group">
+
+    <partial name="PartialViews/DetailsDeleteEmployeePartial" />
+
+    <input type="submit" value="Edit"  class="btn btn-success" />||
+    <a asp-action="Index" class="btn btn-light">Back to List</a>
+</div>
+
+

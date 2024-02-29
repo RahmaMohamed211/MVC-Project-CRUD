@@ -1,0 +1,41 @@
+﻿@model DepartmentViewModel
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1> Are You sure to Delete @Model.Name Department ? </h1>
+<br />
+<br />
+<form asp-action="Delete">
+    <div asp-validation-summary="All">
+        @*lis all error*@
+
+    </div>
+    <div class="form-group">
+        <label class="col-form-label" asp-for="Code"></label>
+        <input class="form-control" asp-for="Code" />
+        <span asp-validation-for="Code" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label class="col-form-label" asp-for="Name"></label>
+        <input class="form-control" asp-for="Name" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label class="col-form-label" asp-for="DataOfcreation"></label>
+        <input class="form-control" asp-for="DataOfcreation" />
+        <span asp-validation-for="DataOfcreation" class="text-danger"></span>
+    </div>
+    <input type="submit" value="Delete" class="btn btn-danger" />||
+    <a asp-action="Index" class="btn btn-light">Cancel</a>
+
+
+</form>
+
+@section ValidationScriptSection{
+  @*   <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+ *@
+    <partial name="_ValidationScriptsPartial" />
+}
+

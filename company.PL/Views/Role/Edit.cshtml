@@ -1,0 +1,36 @@
+﻿@model RoleViewModel
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Edit Role</h1>
+<br />
+<br />
+<form asp-action="Edit">
+    <div asp-validation-summary="All">
+        @*lis all error*@
+
+    </div>
+
+    <partial name="PartialViews/CreateEditEmployee" />
+
+    <div class="my-3">
+        <a class="btn btn-info" asp-action="AddOrRemoveUsers" asp-route-roleId="@Model.Id">Add Or Remove Users</a>
+    </div>
+
+   
+    <input type="submit" value="save" class="btn btn-primary" />||
+    <a asp-action="Index" class="btn btn-light">Back to List</a>
+</form>
+@section ValidationScriptSection{
+    @*    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+ *@
+    <partial name="_ValidationScriptsPartial" />
+}
+
+
+
+
+

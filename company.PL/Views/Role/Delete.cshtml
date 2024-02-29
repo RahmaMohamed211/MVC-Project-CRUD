@@ -1,0 +1,29 @@
+﻿@model RoleViewModel
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Are You Sure Delete this Role ?</h1>
+<br />
+<br />
+<form asp-action="Delete">
+    <div asp-validation-summary="All">
+        @*lis all error*@
+
+    </div>
+    <partial name="PartialViews/DetailsDeleteEmployeePartial" />
+
+    <input type="submit" value="Delete" class="btn btn-danger" />||
+    <a asp-action="Index" class="btn btn-light">Back to List</a>
+</form>
+@section ValidationScriptSection{
+    @*  <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+ *@
+    <partial name="_ValidationScriptsPartial" />
+}
+
+
+
+
