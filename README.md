@@ -1,5 +1,6 @@
 ASP.NET Core MVC Project
-Welcome to my first ASP.NET Core MVC Project! This project is a web application that showcases CRUD operations with a solid 3-Tier Architecture. The project emphasizes security, scalability, and clean code practices by utilizing advanced design patterns such as Dependency Injection and Unit of Work.
+Welcome to my first ASP.NET Core MVC Project! This project is a web application that showcases CRUD operations with a solid 3-Tier Architecture. 
+The project emphasizes security, scalability, and clean code practices by utilizing advanced design patterns such as Dependency Injection and Unit of Work.
 
 🚀 Project Features
 CRUD Operations: Create, Read, Update, and Delete functionality.
